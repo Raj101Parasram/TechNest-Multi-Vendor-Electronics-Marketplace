@@ -33,6 +33,8 @@ app.use("/wishlist", wishlistroutes)
 app.use("/cart", cartroutes)
 app.use("/order", orderroutes)
 
+app.get("/", (req, res) => {res.send("Backend Working");});
+app.get("/test", (req, res) => {res.send("Test Route Working");});
 
 app.listen(process.env.PORT, ()=>{
     console.log(`Server is running on port ${process.env.PORT}`)
