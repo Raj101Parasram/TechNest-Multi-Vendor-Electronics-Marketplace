@@ -41,7 +41,7 @@ const AddProduct = () => {
 
         console.log(data)
 
-        axios.post("https://technest-backend-1xqx.onrender.com/product/addproduct", formData, {headers:{"Content-Type":"multipart/form-data"}}).then((res)=>{
+        axios.post("https://technest-backend-1xqx.onrender.com/product/addproduct", formData, {withCredentials: true}, {headers:{"Content-Type":"multipart/form-data"}}).then((res)=>{
 
             setMsg(res.data.message)
 

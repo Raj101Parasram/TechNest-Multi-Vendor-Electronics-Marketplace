@@ -35,30 +35,15 @@ const BchangePWD = () => {
 
     let sendOtp=()=>{
 
-        axios.post(
-
-            "https://technest-backend-1xqx.onrender.com/business/sendresetotp",
-
-            {
-
-                Bemail:data.Bemail
-
-            }
-
-        )
+        axios.post("https://technest-backend-1xqx.onrender.com/business/sendresetotp", {Bemail:data.Bemai}, {withCredentials: true})
         .then((res)=>{
 
             setMsg(res.data.message)
-
         })
         .catch((err)=>{
 
-            setMsg(
-                err.response.data.message
-            )
-
+            setMsg(err.response.data.message)
         })
-
     }
 
     let changePassword=()=>{
@@ -75,21 +60,12 @@ const BchangePWD = () => {
             return
         }
 
-        axios.post(
-
-            "https://technest-backend-1xqx.onrender.com/business/changepassword",
-
-            data
-
-        )
+        axios.post( "https://technest-backend-1xqx.onrender.com/business/changepassword", data, {withCredentials: true})
         .then((res)=>{
 
-            alert(
-                res.data.message
-            )
+            alert(res.data.message)
 
             navigate("/businesslogin")
-
         })
         .catch((err)=>{
 

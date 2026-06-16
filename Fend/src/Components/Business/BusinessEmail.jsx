@@ -25,12 +25,7 @@ const BusinessEmail = () => {
    otp,
    Bpassword: password
 })
-    axios.post(
-      "https://technest-backend-1xqx.onrender.com/business/sendotp",
-      {
-        Bemail:data.Bemail
-      }
-    )
+    axios.post("https://technest-backend-1xqx.onrender.com/business/sendotp",{ Bemail:data.Bemail}, {withCredentials: true})
     .then((res)=>{
       setMsg(res.data.message)
     })
@@ -55,14 +50,7 @@ const BusinessEmail = () => {
     Bpassword: password
 })
   
-    axios.post(
-      "https://technest-backend-1xqx.onrender.com/business/verifyotp",
-      {
-        ...data,
-        otp:otp,
-        Bpassword:password
-      }
-    )
+    axios.post("https://technest-backend-1xqx.onrender.com/business/verifyotp", {...data, otp:otp, Bpassword:password}, {withCredentials: true})
     .then((res)=>{
 
       alert(res.data.message)
