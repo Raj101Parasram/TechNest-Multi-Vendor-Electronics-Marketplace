@@ -1,0 +1,531 @@
+.admindashboard{
+
+    min-height:100vh;
+
+    background:#bf993b;
+
+    padding:40px;
+}
+
+.admindashboard h1{
+
+    text-align:center;
+
+    color:white;
+
+    margin-bottom:40px;
+}
+
+.admincards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+}
+
+.admincard{
+
+    background:#4c4b4b;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:50px 20px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.admincard:hover{
+
+    transform:translateY(-5px);
+
+    background:#333;
+}
+
+
+
+
+.admindashboard{
+
+    min-height:100vh;
+    background:#bf993b;
+    padding:40px;
+}
+
+.admindashboard h1{
+
+    text-align:center;
+    color:white;
+    margin-bottom:40px;
+}
+
+.admincards{
+
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+}
+
+.admincard{
+
+    background:white;
+    border-radius:15px;
+    padding:40px;
+    text-align:center;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.admincard:hover{
+
+    transform:translateY(-5px);
+}
+
+.admincard h2{
+
+    color:#bf993b;
+}
+
+
+@media (max-width:768px){
+
+    .admindashboard{
+
+        padding:20px;
+    }
+
+    .admindashboard h1{
+
+        font-size:32px;
+        margin-bottom:25px;
+    }
+
+    .admincards{
+
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .admincard{
+
+        padding:25px;
+    }
+
+    .admincard h2{
+
+        font-size:22px;
+    }
+
+    .admincard h3{
+
+        font-size:28px;
+    }
+}
+
+
+
+/* ==========================
+   MANAGE USERS PAGE
+========================== */
+
+.manageusers{
+
+    min-height:100vh;
+    background:#bf993b;
+    padding:40px;
+}
+
+.manageusers h1{
+
+    text-align:center;
+    color:white;
+    font-size:42px;
+    margin-bottom:30px;
+}
+
+.manageusers table{
+
+    width:100%;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    border-collapse:collapse;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.manageusers thead{
+
+    background:#4c4b4b;
+}
+
+.manageusers th{
+
+    color:#BFA181;
+    padding:18px;
+    font-size:18px;
+    text-align:center;
+}
+
+.manageusers td{
+
+    padding:16px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+    color:#333;
+}
+
+.manageusers tr:hover{
+
+    background:#f5f5f5;
+}
+
+.deletebtn{
+
+    background:#c62828;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.deletebtn:hover{
+
+    background:#8e0000;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:768px){
+
+    .manageusers{
+
+        padding:15px;
+        overflow-x:auto;
+    }
+
+    .manageusers h1{
+
+        font-size:32px;
+        margin-bottom:20px;
+    }
+
+    .manageusers table{
+
+        min-width:900px;
+    }
+
+    .manageusers th,
+    .manageusers td{
+
+        padding:12px;
+        font-size:14px;
+    }
+
+    .deletebtn{
+
+        padding:8px 14px;
+        font-size:13px;
+    }
+}
+
+
+
+/* Manage Business */
+
+@media (max-width:768px){
+
+    .managebusinesses{
+
+        padding:15px;
+        overflow-x:auto;
+    }
+
+    .managebusinesses h1{
+
+        font-size:32px;
+        margin-bottom:20px;
+    }
+
+    .managebusinesses table{
+
+        min-width:1000px;
+    }
+
+    .managebusinesses th,
+    .managebusinesses td{
+
+        padding:12px;
+        font-size:14px;
+    }
+}
+
+
+/* ManagProducts */
+
+.manageproducts{
+
+    min-height:100vh;
+    background:#bf993b;
+    padding:40px;
+}
+
+.manageproducts h1{
+
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
+}
+
+.adminproductgrid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fill,minmax(280px,1fr));
+
+    gap:25px;
+}
+
+.adminproductcard{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    text-align:center;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.adminproductcard img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+}
+
+.adminproductcard h2{
+
+    margin:15px 0;
+
+    color:#333;
+}
+
+.adminproductcard p{
+
+    margin:8px 0;
+}
+
+
+
+@media (max-width:768px){
+
+    .manageproducts{
+
+        padding:20px;
+    }
+
+    .manageproducts h1{
+
+        font-size:32px;
+    }
+
+    .adminproductgrid{
+
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .adminproductcard{
+
+        padding:12px;
+    }
+
+    .adminproductcard img{
+
+        height:180px;
+    }
+
+    .adminproductcard h2{
+
+        font-size:20px;
+    }
+
+    .adminproductcard p{
+
+        font-size:14px;
+    }
+}
+
+
+
+
+
+/* =========================
+   MANAGE ORDERS
+========================= */
+
+.manageorders{
+
+    min-height:100vh;
+    background:#bf993b;
+    padding:40px;
+}
+
+.manageorders h1{
+
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
+    font-size:60px;
+}
+
+.manageorders table{
+
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.manageorders th{
+
+    background:#4c4b4b;
+    color:#BFA181;
+    padding:18px;
+    font-size:20px;
+}
+
+.manageorders td{
+
+    padding:18px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+.manageorders tr:hover{
+
+    background:#f5f5f5;
+}
+
+.deletebtn{
+
+    background:#d62828;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.deletebtn:hover{
+
+    background:#9d0208;
+}
+
+@media (max-width:768px){
+
+    .manageorders{
+
+        padding:15px;
+        overflow-x:auto;
+    }
+
+    .manageorders h1{
+
+        font-size:32px;
+        margin-bottom:20px;
+    }
+
+    .manageorders table{
+
+        min-width:1100px;
+    }
+
+    .manageorders th,
+    .manageorders td{
+
+        padding:12px;
+        font-size:14px;
+        white-space:nowrap;
+    }
+
+    .deletebtn{
+
+        padding:8px 14px;
+        font-size:13px;
+    }
+}
+
+
+/* Analytics Cards */
+
+.adminstats{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    margin-bottom:40px;
+}
+
+.statcard{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.statcard h2{
+
+    color:#bf993b;
+
+    margin-bottom:10px;
+
+    font-size:20px;
+}
+
+.statcard h3{
+
+    font-size:32px;
+
+    color:#333;
+}
