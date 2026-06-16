@@ -11,11 +11,21 @@ const Like = ()=>{
     let [products,setProducts] = useState([])
     let navigate = useNavigate()
 
-    useEffect(()=>{ axios.get(`https://technest-backend-1xqx.onrender.com/wishlist/${state.email}`).then((res)=>{
+    useEffect(()=>{
 
-          setProducts(res.data)
-        })
-    },[])
+    if(!state.email) return;
+
+    axios.get(
+        `https://technest-backend-1xqx.onrender.com/wishlist/${state.email}`
+    )
+    .then((res)=>{
+        setProducts(res.data);
+    })
+    .catch((err)=>{
+        console.log(err);
+    });
+
+},[state.email]);
 
 
     let removeItem=(id)=>{

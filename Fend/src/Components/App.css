@@ -316,3 +316,161 @@ button{
     font-size:14px !important;
 }
 }
+
+
+/* ===========================
+   Mobile Responsive Design
+   =========================== */
+
+@media screen and (max-width: 768px) {
+
+    .userlogin,
+    .userreg {
+        padding: 10px;
+    }
+
+    .userlogin h2,
+    .userreg h2 {
+        text-align: center;
+        font-size: 20px !important;
+    }
+
+    /* Login Page */
+
+    .mainlogin {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .login {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .login label {
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .login input {
+        width: 100%;
+    }
+
+    .login button {
+        width: 100%;
+    }
+
+    .newuser {
+        width: 100%;
+        border-left: none;
+        border-top: 2px solid #c8c4c4;
+        padding: 20px 0;
+        height: auto;
+    }
+
+    .newuser button {
+        width: 100%;
+    }
+
+    /* Registration Page */
+
+    .mainreg {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .reg {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .reg1,
+    .reg2 {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+
+    .reg1 label,
+    .reg2 label,
+    .reg3 label {
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .reg input,
+    .reg2 select,
+    .reg3 input {
+        width: 100%;
+    }
+
+    .reg3 {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .reg3 button {
+        width: 100%;
+    }
+
+    .already {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .already button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+
+/* Small Mobile Devices */
+
+@media screen and (max-width: 480px) {
+
+    h1 {
+        font-size: 22px !important;
+    }
+
+    h2 {
+        font-size: 18px !important;
+    }
+
+    h3 {
+        font-size: 16px !important;
+    }
+
+    p {
+        font-size: 14px !important;
+    }
+
+    .mainlogin,
+    .mainreg {
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    .login input,
+    .reg input,
+    .reg2 select,
+    .reg3 input {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .login button,
+    .newuser button,
+    .already button,
+    .reg3 button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
