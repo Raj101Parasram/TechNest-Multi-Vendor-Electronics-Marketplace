@@ -44,7 +44,8 @@ let businesslogin= async(req,res)=>{
             }   
         }
     }
-    catch(err){
+    catch(err)
+    {
         res.status(500).json({"message":"Error occurred while logging in business" , "error": err.message})
     }
 }
