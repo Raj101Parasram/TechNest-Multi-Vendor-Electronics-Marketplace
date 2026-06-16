@@ -11,7 +11,7 @@ const Like = ()=>{
     let [products,setProducts] = useState([])
     let navigate = useNavigate()
 
-    useEffect(()=>{ axios.get(`http://localhost:5000/wishlist/${state.email}`).then((res)=>{
+    useEffect(()=>{ axios.get(`https://technest-backend-1xqx.onrender.com/wishlist/${state.email}`).then((res)=>{
 
           setProducts(res.data)
         })
@@ -20,7 +20,7 @@ const Like = ()=>{
 
     let removeItem=(id)=>{
 
-        axios.delete("http://localhost:5000/wishlist/remove",{data:{ userEmail:state.email, productId:id}}).then(()=>{
+        axios.delete("https://technest-backend-1xqx.onrender.com/wishlist/remove",{data:{ userEmail:state.email, productId:id}}).then(()=>{
 
             setProducts(products.filter(p=>p.productId!==id))
         })
@@ -34,7 +34,7 @@ const Like = ()=>{
               products.map((item)=>(
                   <div className="wishlistcard" key={item.productId}>
 
-                        <img src={`http://localhost:5000/uploads/${item.productImage}`}/>
+                        <img src={`https://technest-backend-1xqx.onrender.com/uploads/${item.productImage}`}/>
 
                         <h2>{item.productName}</h2>
                         <h3>{item.company}</h3>

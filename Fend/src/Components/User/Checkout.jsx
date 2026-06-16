@@ -24,14 +24,14 @@ const Checkout = ()=>{
 
         if(productId)
         {
-            axios.get(`http://localhost:5000/product/singleproduct/${productId}`).then((res)=>{
+            axios.get(`https://technest-backend-1xqx.onrender.com/product/singleproduct/${productId}`).then((res)=>{
 
                 setProducts([{...res.data,quantity:1}])
             })
         }
         else
         {
-            axios.get(`http://localhost:5000/cart/${state.email}`).then((res)=>{
+            axios.get(`https://technest-backend-1xqx.onrender.com/cart/${state.email}`).then((res)=>{
 
                 setProducts(res.data)
             })
@@ -58,7 +58,7 @@ const Checkout = ()=>{
 
     if(productId)
     {
-        axios.post("http://localhost:5000/order/buynow",{userEmail:state.email,productId}).then((res)=>{
+        axios.post("https://technest-backend-1xqx.onrender.com/order/buynow",{userEmail:state.email,productId}).then((res)=>{
 
             alert(res.data.message)
             navigate("/order")
@@ -66,7 +66,7 @@ const Checkout = ()=>{
     }
     else
     {
-        axios.post("http://localhost:5000/order/placeorder",{userEmail:state.email}).then((res)=>{
+        axios.post("https://technest-backend-1xqx.onrender.com/order/placeorder",{userEmail:state.email}).then((res)=>{
 
             alert(res.data.message)
             navigate("/order")
@@ -83,7 +83,7 @@ const Checkout = ()=>{
 
                     <div className="checkoutcard" key={item.productId} >
 
-                        <img src={`http://localhost:5000/uploads/${item.productImage}`} alt="" />
+                        <img src={`https://technest-backend-1xqx.onrender.com/uploads/${item.productImage}`} alt="" />
 
                         <div>
 

@@ -12,7 +12,7 @@ const Order = ()=>{
 
         if(state.email)
         {
-          axios.get(`http://localhost:5000/order/user/${state.email}`).then((res)=>{
+          axios.get(`https://technest-backend-1xqx.onrender.com/order/user/${state.email}`).then((res)=>{
 
             setOrders(res.data)
 
@@ -26,11 +26,11 @@ const Order = ()=>{
     let cancelOrder = (orderId)=>
     {
 
-        axios.put(`http://localhost:5000/order/cancel/${orderId}`).then((res)=>{
-        
+        axios.put(`https://technest-backend-1xqx.onrender.com/order/cancel/${orderId}`).then((res)=>{
+
             alert(res.data.message)
             setOrders(orders.map((item)=> item.orderId === orderId ? {...item,status:"Cancelled"} : item))
-        
+
         }).catch((err)=>
         {
             console.log(err)
@@ -49,7 +49,7 @@ const Order = ()=>{
 
                     <div className="ordercard" key={item.orderId} >
 
-                        <img src={`http://localhost:5000/uploads/${item.productImage}`} alt="" />
+                        <img src={`https://technest-backend-1xqx.onrender.com/uploads/${item.productImage}`} alt="" />
 
                         <div className="orderdetails">
 

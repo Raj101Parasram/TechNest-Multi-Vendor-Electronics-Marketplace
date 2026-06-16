@@ -24,7 +24,7 @@ const ShopProducts = ()=>{
 
     let applyFilter = ()=>{
 
-    axios.post("http://localhost:5000/product/filtershopproducts",
+    axios.post("https://technest-backend-1xqx.onrender.com/product/filtershopproducts",
     {        
       businessEmail,
       company,
@@ -39,18 +39,18 @@ const ShopProducts = ()=>{
     })
 }
 
-    useEffect(()=>{axios.get(`http://localhost:5000/product/shopproducts/${businessEmail}`).then((res)=>{
+    useEffect(()=>{axios.get(`https://technest-backend-1xqx.onrender.com/product/shopproducts/${businessEmail}`).then((res)=>{
 
             setProducts(res.data)
         })
 
-        axios.get(`http://localhost:5000/business/shopinfo/${businessEmail}`).then((res)=>{
+        axios.get(`https://technest-backend-1xqx.onrender.com/business/shopinfo/${businessEmail}`).then((res)=>{
 
           setShop(res.data)
 
           if(state.role === "user")
           {
-              axios.get(`http://localhost:5000/wishlist/${state.email}`).then((res)=>{
+              axios.get(`https://technest-backend-1xqx.onrender.com/wishlist/${state.email}`).then((res)=>{
                   
                 let ids = res.data.map(item => item.productId)
                 setLikedProducts(ids)
@@ -69,7 +69,7 @@ const ShopProducts = ()=>{
         return
       }
       
-      axios.post("http://localhost:5000/wishlist/toggle",{userEmail:state.email, productId}).then((res)=>{
+      axios.post("https://technest-backend-1xqx.onrender.com/wishlist/toggle",{userEmail:state.email, productId}).then((res)=>{
       
           if(res.data.liked)
           {
@@ -90,7 +90,7 @@ const ShopProducts = ()=>{
             return
         }
 
-        axios.post("http://localhost:5000/cart/add", {userEmail:state.email,productId}).then((res)=>
+        axios.post("https://technest-backend-1xqx.onrender.com/cart/add", {userEmail:state.email,productId}).then((res)=>
         {
             alert(res.data.message)
         })
@@ -104,7 +104,7 @@ const ShopProducts = ()=>{
         <div className="shopinfo">
           <div className="shopheader">
 
-            <img src={shop.Bimg? `http://localhost:5000/uploads/${shop.Bimg}` : "https://via.placeholder.com/150"} alt=""/>
+            <img src={shop.Bimg? `https://technest-backend-1xqx.onrender.com/uploads/${shop.Bimg}` : "https://via.placeholder.com/150"} alt=""/>
 
             <div>
               <h1>{shop.Bname}</h1>
@@ -202,7 +202,7 @@ const ShopProducts = ()=>{
                 setMaxPrice(100000) 
                 setSort("")
 
-                axios.get(`http://localhost:5000/product/shopproducts/${businessEmail}`).then((res)=>{
+                axios.get(`https://technest-backend-1xqx.onrender.com/product/shopproducts/${businessEmail}`).then((res)=>{
 
                   setProducts(res.data)
                 })
@@ -226,7 +226,7 @@ const ShopProducts = ()=>{
                   </span>  
                 )}
 
-                <img src={`http://localhost:5000/uploads/${item.productImage}`} alt="" />
+                <img src={`https://technest-backend-1xqx.onrender.com/uploads/${item.productImage}`} alt="" />
                 
                 <h2>{item.productName}</h2>
                 <h3>{item.company}</h3>

@@ -12,7 +12,7 @@ const Logout = ()=>{
     useEffect(()=>{
 
         axios.get(
-            "http://localhost:5000/auth/logout",
+            "https://technest-backend-1xqx.onrender.com/auth/logout",
             {
                 withCredentials:true
             }

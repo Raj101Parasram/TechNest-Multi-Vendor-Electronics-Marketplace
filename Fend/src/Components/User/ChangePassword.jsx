@@ -37,7 +37,7 @@ const ChangePassword = () => {
 
         axios.post(
 
-            "http://localhost:5000/user/sendresetotp",
+            "https://technest-backend-1xqx.onrender.com/user/sendresetotp",
 
             {
 
@@ -77,7 +77,7 @@ const ChangePassword = () => {
 
         axios.post(
 
-            "http://localhost:5000/user/changepassword",
+            "https://technest-backend-1xqx.onrender.com/user/changepassword",
 
             data
 

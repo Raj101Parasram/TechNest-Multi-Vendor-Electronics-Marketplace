@@ -37,7 +37,7 @@ const BchangePWD = () => {
 
         axios.post(
 
-            "http://localhost:5000/business/sendresetotp",
+            "https://technest-backend-1xqx.onrender.com/business/sendresetotp",
 
             {
 
@@ -77,7 +77,7 @@ const BchangePWD = () => {
 
         axios.post(
 
-            "http://localhost:5000/business/changepassword",
+            "https://technest-backend-1xqx.onrender.com/business/changepassword",
 
             data
 

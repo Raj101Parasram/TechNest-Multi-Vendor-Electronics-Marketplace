@@ -11,7 +11,7 @@ const BusinessOrders = ()=>{
     let loadOrders = ()=>{
 
         axios.get(
-            `http://localhost:5000/order/business/${state.email}`
+            `https://technest-backend-1xqx.onrender.com/order/business/${state.email}`
         )
         .then((res)=>{
 
@@ -29,7 +29,7 @@ const BusinessOrders = ()=>{
 
     let updateStatus = (orderId,status)=>{
 
-    axios.put(`http://localhost:5000/order/status/${orderId}`, {status}).then((res)=>
+    axios.put(`https://technest-backend-1xqx.onrender.com/order/status/${orderId}`, {status}).then((res)=>
     {
         alert(res.data.message)
         loadOrders()
@@ -45,7 +45,7 @@ const BusinessOrders = ()=>{
 
                     <div className="ordercard" key={item.orderId}>
 
-                        <img src={`http://localhost:5000/uploads/${item.productImage}`} alt="" />
+                        <img src={`https://technest-backend-1xqx.onrender.com/uploads/${item.productImage}`} alt="" />
 
                         <div className="orderinfo">
 
@@ -75,7 +75,7 @@ const BusinessOrders = ()=>{
                                 <option value="Shipped"> Shipped </option>
                                 <option value="Delivered"> Delivered </option>
                                 <option value="Cancelled"> Cancelled </option>
-                                
+
                             </select>
 
                             <p>

@@ -30,7 +30,7 @@ const UserProfile = () => {
         if(state.email){
         
             axios.get(
-                `http://localhost:5000/user/profile/${state.email}`
+                `https://technest-backend-1xqx.onrender.com/user/profile/${state.email}`
             )
             .then((res)=>{
             
@@ -59,7 +59,7 @@ const UserProfile = () => {
         try{
 
             let res = await axios.put(
-                "http://localhost:5000/user/updateprofile",
+                "https://technest-backend-1xqx.onrender.com/user/updateprofile",
                 data
             );
 
@@ -88,7 +88,7 @@ const UserProfile = () => {
         try{
 
             let res = await axios.post(
-                "http://localhost:5000/user/updateprofileimage",
+                "https://technest-backend-1xqx.onrender.com/user/updateprofileimage",
                 formData
             );
 
@@ -96,7 +96,7 @@ const UserProfile = () => {
 
             // Fetch latest user data
             let profileRes = await axios.get(
-                `http://localhost:5000/user/profile/${state.email}`
+                `https://technest-backend-1xqx.onrender.com/user/profile/${state.email}`
             );
 
             setData(profileRes.data);
@@ -119,7 +119,7 @@ const UserProfile = () => {
 
 
                     <img
-                        src={data.profileImage ? `http://localhost:5000/uploads/${data.profileImage}`
+                        src={data.profileImage ? `https://technest-backend-1xqx.onrender.com/uploads/${data.profileImage}`
                         :
                         "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"}
                         alt="profile"

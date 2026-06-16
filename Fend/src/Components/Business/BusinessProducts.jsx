@@ -12,7 +12,7 @@ const BusinessProducts = ()=>{
 
     let getProducts = ()=>{
 
-        axios.get(`http://localhost:5000/product/businessproducts/${state.email}`).then((res)=>{
+        axios.get(`https://technest-backend-1xqx.onrender.com/product/businessproducts/${state.email}`).then((res)=>{
 
           setProducts(res.data)
 
@@ -29,7 +29,7 @@ const BusinessProducts = ()=>{
 
     let del=(productId)=>{
 
-        axios.delete(`http://localhost:5000/product/deleteproduct/${productId}`).then((res)=>{
+        axios.delete(`https://technest-backend-1xqx.onrender.com/product/deleteproduct/${productId}`).then((res)=>{
 
             alert(res.data.message)
             getProducts()
@@ -45,7 +45,7 @@ const BusinessProducts = ()=>{
                   products.map((item)=>{return(
                           <div className="productcard" key={item.productId} >
 
-                             <img src={`http://localhost:5000/uploads/${item.productImage}`}alt=""/>
+                             <img src={`https://technest-backend-1xqx.onrender.com/uploads/${item.productImage}`}alt=""/>
 
                               <h2> {item.productName} </h2>
 

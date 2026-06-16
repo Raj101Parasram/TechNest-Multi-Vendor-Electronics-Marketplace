@@ -20,7 +20,7 @@ const BusinessDashboard = ()=>{
         if(state.email){
 
             axios.get(
-                `http://localhost:5000/business/dashboard/${state.email}`
+                `https://technest-backend-1xqx.onrender.com/business/dashboard/${state.email}`
             )
             .then((res)=>{
 

@@ -12,7 +12,7 @@ const Cart = ()=>{
 
     let loadCart=()=>{
 
-        axios.get(`http://localhost:5000/cart/${state.email}`).then((res)=>{
+        axios.get(`https://technest-backend-1xqx.onrender.com/cart/${state.email}`).then((res)=>{
 
             setProducts(res.data)
         })
@@ -28,7 +28,7 @@ const Cart = ()=>{
 
     let increaseQuantity=(item)=>{
 
-        axios.put("http://localhost:5000/cart/quantity",{ userEmail:state.email, productId:item.productId, quantity:item.quantity + 1 }).then(()=>
+        axios.put("https://technest-backend-1xqx.onrender.com/cart/quantity",{ userEmail:state.email, productId:item.productId, quantity:item.quantity + 1 }).then(()=>
         {
             loadCart()
 
@@ -45,7 +45,7 @@ const Cart = ()=>{
             return
         }
 
-        axios.put("http://localhost:5000/cart/quantity",{userEmail:state.email, productId:item.productId, quantity:item.quantity - 1}).then(()=>
+        axios.put("https://technest-backend-1xqx.onrender.com/cart/quantity",{userEmail:state.email, productId:item.productId, quantity:item.quantity - 1}).then(()=>
         {
             loadCart()
         })
@@ -53,7 +53,7 @@ const Cart = ()=>{
 
     let removeProduct=(productId)=>{
 
-        axios.delete("http://localhost:5000/cart/remove",
+        axios.delete("https://technest-backend-1xqx.onrender.com/cart/remove",
         {
             data:{ userEmail:state.email, productId }
         }).then(()=>
@@ -89,7 +89,7 @@ const Cart = ()=>{
                   
                     <div className="cartcard" key={item.productId} >
 
-                        <img src={`http://localhost:5000/uploads/${item.productImage}`} alt="" />
+                        <img src={`https://technest-backend-1xqx.onrender.com/uploads/${item.productImage}`} alt="" />
 
                         <div className="cartdetails">
 

@@ -19,14 +19,14 @@ export const Home = () => {
       let city = params.get("city") || ""
       let pincode = params.get("pincode") || ""
 
-      axios.get(`http://localhost:5000/product/homeshops?search=${search}&city=${city}&pincode=${pincode}`).then((res)=>
+      axios.get(`https://technest-backend-1xqx.onrender.com/product/homeshops?search=${search}&city=${city}&pincode=${pincode}`).then((res)=>
       {
           setShops(res.data)
       })
 
       if(state.role === "user")
       {
-          axios.get(`http://localhost:5000/wishlist/${state.email}`).then((res)=>
+          axios.get(`https://technest-backend-1xqx.onrender.com/wishlist/${state.email}`).then((res)=>
           {
             console.log("WISHLIST =",res.data)
             let ids = res.data.map(item => item.productId)  
@@ -44,7 +44,7 @@ export const Home = () => {
           return
       }
 
-      axios.post("http://localhost:5000/wishlist/toggle",{userEmail:state.email, productId}).then((res)=>{
+      axios.post("https://technest-backend-1xqx.onrender.com/wishlist/toggle",{userEmail:state.email, productId}).then((res)=>{
 
           if(res.data.liked)
           {
@@ -66,7 +66,7 @@ export const Home = () => {
           return
       }
 
-      axios.post("http://localhost:5000/cart/add", {userEmail:state.email,productId}).then((res)=>
+      axios.post("https://technest-backend-1xqx.onrender.com/cart/add", {userEmail:state.email,productId}).then((res)=>
       {
           alert(res.data.message)
       })
@@ -94,7 +94,7 @@ export const Home = () => {
                       </span>
                     )}
                   
-                      <img src={`http://localhost:5000/uploads/${item.productImage}`} alt="" />
+                      <img src={`https://technest-backend-1xqx.onrender.com/uploads/${item.productImage}`} alt="" />
                       <h3> {item.productName} </h3>
                       <p> ₹{item.price} </p>
 

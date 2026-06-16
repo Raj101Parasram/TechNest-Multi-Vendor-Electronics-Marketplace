@@ -22,7 +22,7 @@ export const Userlogin = () => {
     }
     else
     {
-      axios.post("http://localhost:5000/user/userlogin", data).then((res)=>{
+      axios.post("https://technest-backend-1xqx.onrender.com/user/userlogin", data).then((res)=>{
         setmsg(res.data.message)
         if(res.data.message=="User logged in successfully"){
           update({token: "loggedin", role: "user", name: res.data.name, email: res.data.email})

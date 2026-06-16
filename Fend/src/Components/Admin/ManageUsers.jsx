@@ -8,7 +8,7 @@ const ManageUsers = ()=>{
 
     let loadUsers = ()=>{
 
-        axios.get("http://localhost:5000/user/allusers").then((res)=>
+        axios.get("https://technest-backend-1xqx.onrender.com/user/allusers").then((res)=>
         {
             setUsers(res.data)
         })
@@ -25,7 +25,7 @@ const ManageUsers = ()=>{
             return
         }
 
-        axios.delete(`http://localhost:5000/user/deleteuser/${email}`).then((res)=>{
+        axios.delete(`https://technest-backend-1xqx.onrender.com/user/deleteuser/${email}`).then((res)=>{
 
             alert(res.data.message)
             loadUsers()

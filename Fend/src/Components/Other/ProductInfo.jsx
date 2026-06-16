@@ -15,13 +15,13 @@ const ProductInfo = ()=>{
     let navigate =useNavigate()
 
 
-    useEffect(()=>{axios.get(`http://localhost:5000/product/singleproduct/${productId}`).then((res)=>{
+    useEffect(()=>{axios.get(`https://technest-backend-1xqx.onrender.com/product/singleproduct/${productId}`).then((res)=>{
 
             setProduct(res.data)
 
             if(state.role === "user")
             {
-                axios.get(`http://localhost:5000/wishlist/check/${state.email}/${productId}`).then((res)=>{
+                axios.get(`https://technest-backend-1xqx.onrender.com/wishlist/check/${state.email}/${productId}`).then((res)=>{
                 
                     setLiked(res.data.liked)
                 })
@@ -37,7 +37,7 @@ const ProductInfo = ()=>{
             return
         }
 
-        axios.post("http://localhost:5000/wishlist/toggle", { userEmail:state.email, productId:product.productId }).then((res)=>
+        axios.post("https://technest-backend-1xqx.onrender.com/wishlist/toggle", { userEmail:state.email, productId:product.productId }).then((res)=>
         {
             setLiked(res.data.liked)
 
@@ -55,13 +55,13 @@ const ProductInfo = ()=>{
           return
       }
 
-      axios.post("http://localhost:5000/cart/add", {userEmail:state.email,productId}).then((res)=>
+      axios.post("https://technest-backend-1xqx.onrender.com/cart/add", {userEmail:state.email,productId}).then((res)=>
       {
           alert(res.data.message)
       })
     }
 
-    let placeOrder=()=>{axios.post("http://localhost:5000/order/placeorder", {userEmail:state.email}).then((res)=>
+    let placeOrder=()=>{axios.post("https://technest-backend-1xqx.onrender.com/order/placeorder", {userEmail:state.email}).then((res)=>
         {
             alert(res.data.message)
             navigate("/order")
@@ -78,7 +78,7 @@ const ProductInfo = ()=>{
             <div className="productinfocard">
 
                 <div className="productimage">
-                    <img src={`http://localhost:5000/uploads/${product.productImage}`}alt=""/>
+                    <img src={`https://technest-backend-1xqx.onrender.com/uploads/${product.productImage}`}alt=""/>
                 </div>
 
                 <div className="productdetails">

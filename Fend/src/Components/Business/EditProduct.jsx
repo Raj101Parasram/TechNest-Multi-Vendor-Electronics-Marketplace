@@ -20,7 +20,7 @@ const EditProduct = ()=>{
     let [msg,setMsg] = useState("")
 
     useEffect(()=>{
-        axios.get( `http://localhost:5000/product/singleproduct/${productId}`).then((res)=>{
+        axios.get( `https://technest-backend-1xqx.onrender.com/product/singleproduct/${productId}`).then((res)=>{
             
             setData(res.data)
         })
@@ -41,7 +41,7 @@ const EditProduct = ()=>{
             formData.append("productImage",image)
         }
 
-        axios.put(`http://localhost:5000/product/updateproduct/${productId}`, formData).then((res)=>{
+        axios.put(`https://technest-backend-1xqx.onrender.com/product/updateproduct/${productId}`, formData).then((res)=>{
 
             alert(res.data.message)
             navigate("/businessproducts")

@@ -9,7 +9,7 @@ const ManageBusinesses = ()=>{
     let loadBusinesses = ()=>{
 
         axios.get(
-            "http://localhost:5000/business/allbusinesses"
+            "https://technest-backend-1xqx.onrender.com/business/allbusinesses"
         )
         .then((res)=>{
 
@@ -40,7 +40,7 @@ const ManageBusinesses = ()=>{
         }
 
         axios.delete(
-            `http://localhost:5000/business/deletebusiness/${email}`
+            `https://technest-backend-1xqx.onrender.com/business/deletebusiness/${email}`
         )
         .then((res)=>{
 

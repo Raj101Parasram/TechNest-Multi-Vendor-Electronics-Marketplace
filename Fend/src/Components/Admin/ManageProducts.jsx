@@ -8,7 +8,7 @@ const ManageProducts = ()=>{
 
     let loadProducts = ()=>{
 
-        axios.get("http://localhost:5000/product/allproducts").then((res)=>{
+        axios.get("https://technest-backend-1xqx.onrender.com/product/allproducts").then((res)=>{
 
             setProducts(res.data)
         })
@@ -25,7 +25,7 @@ const ManageProducts = ()=>{
             return
         }
 
-        axios.delete(`http://localhost:5000/product/admindelete/${productId}`).then((res)=>{
+        axios.delete(`https://technest-backend-1xqx.onrender.com/product/admindelete/${productId}`).then((res)=>{
 
             alert(res.data.message)
             loadProducts()
@@ -45,7 +45,7 @@ const ManageProducts = ()=>{
 
                         <div className="adminproductcard" key={item.productId} >
 
-                            <img src={`http://localhost:5000/uploads/${item.productImage}`} alt="" />
+                            <img src={`https://technest-backend-1xqx.onrender.com/uploads/${item.productImage}`} alt="" />
 
                             <h2>{item.productName}</h2>
                             <p> Shop : {item.businessName} </p>

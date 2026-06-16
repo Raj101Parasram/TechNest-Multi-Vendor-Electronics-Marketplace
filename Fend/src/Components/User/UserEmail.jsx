@@ -20,7 +20,7 @@ const UserEmail = () => {
   let sendOtp = ()=>{
 
     axios.post(
-      "http://localhost:5000/user/sendotp",
+      "https://technest-backend-1xqx.onrender.com/user/sendotp",
       {
         email:data.email
       }
@@ -41,7 +41,7 @@ const UserEmail = () => {
     }
 
     axios.post(
-      "http://localhost:5000/user/verifyotp",
+      "https://technest-backend-1xqx.onrender.com/user/verifyotp",
       {
         ...data,
         otp,

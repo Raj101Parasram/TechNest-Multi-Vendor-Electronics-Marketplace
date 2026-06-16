@@ -26,7 +26,7 @@ const BusinessEmail = () => {
    Bpassword: password
 })
     axios.post(
-      "http://localhost:5000/business/sendotp",
+      "https://technest-backend-1xqx.onrender.com/business/sendotp",
       {
         Bemail:data.Bemail
       }
@@ -56,7 +56,7 @@ const BusinessEmail = () => {
 })
   
     axios.post(
-      "http://localhost:5000/business/verifyotp",
+      "https://technest-backend-1xqx.onrender.com/business/verifyotp",
       {
         ...data,
         otp:otp,

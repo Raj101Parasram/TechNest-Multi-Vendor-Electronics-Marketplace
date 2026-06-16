@@ -8,7 +8,7 @@ const ManageOrders = ()=>{
 
     let loadOrders = ()=>{
 
-        axios.get("http://localhost:5000/order/allorders").then((res)=>
+        axios.get("https://technest-backend-1xqx.onrender.com/order/allorders").then((res)=>
         {
             setOrders(res.data)
         })
@@ -27,7 +27,7 @@ const ManageOrders = ()=>{
             return
         }
 
-        axios.delete(`http://localhost:5000/order/admindelete/${orderId}`).then((res)=>{
+        axios.delete(`https://technest-backend-1xqx.onrender.com/order/admindelete/${orderId}`).then((res)=>{
 
             alert(res.data.message)
             loadOrders()

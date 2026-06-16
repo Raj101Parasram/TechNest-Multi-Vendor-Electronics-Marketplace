@@ -9,7 +9,7 @@ const AdminDashboard = () => {
     useEffect(() => {
 
         axios.get(
-            "http://localhost:5000/business/admindashboard"
+            "https://technest-backend-1xqx.onrender.com/business/admindashboard"
         )
         .then((res) => {
 

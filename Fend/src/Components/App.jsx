@@ -53,7 +53,7 @@ export const App = () => {
   useEffect(()=>{
     
       axios.get(
-          "http://localhost:5000/auth/checklogin",
+          "https://technest-backend-1xqx.onrender.com/auth/checklogin",
           {
             withCredentials:true
           }

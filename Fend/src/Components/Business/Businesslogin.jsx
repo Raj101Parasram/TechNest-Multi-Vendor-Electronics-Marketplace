@@ -21,7 +21,7 @@ export const Businesslogin = () => {
     }
     else
     {
-      axios.post("http://localhost:5000/business/blogin", data).then((res)=>{
+      axios.post("https://technest-backend-1xqx.onrender.com/business/blogin", data).then((res)=>{
         setmsg(res.data.message)
         if(res.data.message=="Business logged in successfully"){
           update({token: res.data.token, role: res.data.role, name: res.data.name, email: res.data.email})
