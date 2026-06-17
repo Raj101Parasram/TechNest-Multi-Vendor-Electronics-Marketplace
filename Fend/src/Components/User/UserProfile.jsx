@@ -119,12 +119,14 @@ const UserProfile = () => {
 
 
                     <img
-                        src={data.profileImage ? `https://technest-backend-1xqx.onrender.com/uploads/${data.profileImage}`
-                        :
-                        "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"}
+                        src={
+                            data.profileImage
+                            ? data.profileImage
+                            : "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                        }
                         alt="profile"
                         className="profileavatar"
-                        />
+                    />
 
                     <h1>{data.name}</h1>
                     <p>{data.email}</p>

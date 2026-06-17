@@ -108,7 +108,7 @@ let updateProfileImage = async(req,res)=>{
             {email:req.body.email},
 
             {
-                profileImage:req.file.filename
+                profileImage:req.file.path
             }
 
         );

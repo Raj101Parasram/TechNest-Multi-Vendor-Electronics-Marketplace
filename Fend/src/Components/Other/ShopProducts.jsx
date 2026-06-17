@@ -226,7 +226,7 @@ const ShopProducts = ()=>{
                   </span>  
                 )}
 
-                <img src={`https://technest-backend-1xqx.onrender.com/uploads/${item.productImage}`} alt="" />
+                <img src={item.productImage} alt="" />
                 
                 <h2>{item.productName}</h2>
                 <h3>{item.company}</h3>

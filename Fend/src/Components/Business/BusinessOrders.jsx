@@ -45,7 +45,7 @@ const BusinessOrders = ()=>{
 
                     <div className="ordercard" key={item.orderId}>
 
-                        <img src={`https://technest-backend-1xqx.onrender.com/uploads/${item.productImage}`} alt="" />
+                        <img src={item.productImage} alt="" />
 
                         <div className="orderinfo">
 

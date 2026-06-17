@@ -23,7 +23,7 @@ let addproduct = async(req,res)=>{
 
                     businessCity:business.Bcity,
                     businessPincode:business.Bpincode,
-                    productImage:req.file.filename,
+                    productImage:req.file.path,
                     productId:Date.now().toString()
             })
 

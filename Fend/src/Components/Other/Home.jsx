@@ -94,7 +94,7 @@ export const Home = () => {
                       </span>
                     )}
                   
-                      <img src={`https://technest-backend-1xqx.onrender.com/uploads/${item.productImage}`} alt="" />
+                      <img src={item.productImage} alt="" />
                       <h3> {item.productName} </h3>
                       <p> ₹{item.price} </p>
 

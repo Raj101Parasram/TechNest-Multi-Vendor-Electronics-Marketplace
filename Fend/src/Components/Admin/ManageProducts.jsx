@@ -45,7 +45,7 @@ const ManageProducts = ()=>{
 
                         <div className="adminproductcard" key={item.productId} >
 
-                            <img src={`https://technest-backend-1xqx.onrender.com/uploads/${item.productImage}`} alt="" />
+                            <img src={item.productImage} alt="" />
 
                             <h2>{item.productName}</h2>
                             <p> Shop : {item.businessName} </p>

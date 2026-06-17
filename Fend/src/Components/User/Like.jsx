@@ -44,7 +44,7 @@ const Like = ()=>{
               products.map((item)=>(
                   <div className="wishlistcard" key={item.productId}>
 
-                        <img src={`https://technest-backend-1xqx.onrender.com/uploads/${item.productImage}`}/>
+                        <img src={item.productImage}/>
 
                         <h2>{item.productName}</h2>
                         <h3>{item.company}</h3>
