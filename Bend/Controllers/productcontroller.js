@@ -91,7 +91,7 @@ let updateProduct = async(req,res)=>{
         let updateData = { ...req.body }
 
         if(req.file){
-            updateData.productImage = req.file.filename
+            updateData.productImage = req.file.path
         }
 
         await Product.findOneAndUpdate({ productId:req.params.productId}, updateData)

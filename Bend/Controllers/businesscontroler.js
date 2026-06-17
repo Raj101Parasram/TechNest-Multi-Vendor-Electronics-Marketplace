@@ -473,7 +473,7 @@ let updateBusinessImage = async(req,res)=>{
 
             { Bemail:req.body.Bemail },
 
-            { Bimg:req.file.filename }
+            { Bimg:req.file.path }
 
         )
 
